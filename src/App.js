@@ -9,13 +9,15 @@ function App() {
     const axiosInstance = Axios.create({
       // baseURL: 'https://www.data.go.kr/',
       withCredentials: true,
+      // responseType: 'document',
+      // responseEncoding: 'utf8',
     });
     const url = '/dataset/fileDownload.do?atchFileId=FILE_000000001555802&fileDetailSn=1&publicDataDetailPk=uddi:01beb797-fb7b-4318-afac-c7ddd9b0cd4b_201908291321';
     axiosInstance({
       method: 'get',
       url
     }).then(response => {
-      console.log(response);
+      console.log(response.data);
     })
     // Axios({
     //   method: 'get',
