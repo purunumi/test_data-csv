@@ -7,10 +7,10 @@ import Axios from 'axios';
 function App() {
   function getFile(){
     const axiosInstance = Axios.create({
-      baseURL: 'https://www.data.go.kr/',
+      // baseURL: 'https://www.data.go.kr/',
       withCredentials: true,
     });
-    const url = '/dataset/fileDownload.do?atchFileId=FILE_000000001555802&fileDetailSn=1';
+    const url = '/dataset/fileDownload.do?atchFileId=FILE_000000001555802&fileDetailSn=1&publicDataDetailPk=uddi:01beb797-fb7b-4318-afac-c7ddd9b0cd4b_201908291321';
     axiosInstance({
       method: 'get',
       url
@@ -27,8 +27,8 @@ function App() {
     //   //   'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type',
     //   //   'Access-Control-Allow-Credentials': true
     //   // },
-    //   withCredentials: true,
-    //   // responseType: 'document',
+    //   // withCredentials: true,
+    //   responseType: 'document',
     //   // proxy: {
     //   //   host: 'www.data.go.kr',
     //   //   // port: 9000,
